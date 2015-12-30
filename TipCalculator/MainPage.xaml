@@ -86,8 +86,22 @@
                 VerticalAlignment="Top"
                 Text="$0.00"
                 FontSize="36"/>
+
+            <!--Total Bill Amount-->
+            <TextBlock HorizontalAlignment="Left"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Text="Total Bill:"
+                FontSize="24"
+                Margin="0,20,0,0"/>
             
-            
+            <TextBlock x:Name="totalTextBlock"
+                HorizontalAlignment="Left"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Text="$0.00"
+                FontSize="36"/>
+
         </StackPanel>
 
     </Grid>
