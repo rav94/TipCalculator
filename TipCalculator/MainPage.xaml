@@ -31,6 +31,7 @@
 
         <!--Stack Panel Content Area-->
         <StackPanel Name="myStackPanel" Grid.Row="2" Margin="20, 0, 20, 0">
+            
             <!--Bill Amount-->
             <TextBlock HorizontalAlignment="Left"
                 TextWrapping="Wrap"
@@ -38,7 +39,7 @@
                 FontSize="24"/>
            
             <TextBox Name="billAmountTextBox"
-                Text="$0.00"
+                Text="Rs.0.00"
                 TextAlignment="Right"
                 HorizontalAlignment="Left"
                 TextWrapping="Wrap"
@@ -49,6 +50,7 @@
                 LostFocus="amountTextBox_LostFocus"
                 TextChanged="billAmountTextBox_TextChanged"
                 GotFocus="amountTextBox_GotFocus" />
+            
             <!--Percent To Tip-->
             <TextBlock HorizontalAlignment="Left"
                 TextWrapping="Wrap"
@@ -84,7 +86,7 @@
                 HorizontalAlignment="Left"
                 TextWrapping="Wrap"
                 VerticalAlignment="Top"
-                Text="$0.00"
+                Text="Rs.0.00"
                 FontSize="36"/>
 
             <!--Total Bill Amount-->
@@ -99,7 +101,7 @@
                 HorizontalAlignment="Left"
                 TextWrapping="Wrap"
                 VerticalAlignment="Top"
-                Text="$0.00"
+                Text="Rs.0.00"
                 FontSize="36"/>
 
         </StackPanel>

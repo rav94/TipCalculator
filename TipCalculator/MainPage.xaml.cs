@@ -22,11 +22,16 @@ namespace TipCalculator
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        Tip tip;
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            //New instance of Tip
+            tip = new Tip();
         }
 
         /// <summary>
@@ -43,6 +48,26 @@ namespace TipCalculator
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private void amountTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void billAmountTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void amountTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
