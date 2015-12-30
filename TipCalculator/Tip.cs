@@ -28,7 +28,7 @@ namespace TipCalculator
             double tipAmount = 0.0;
             double totalAmount = 0.0;
 
-            if (double.TryParse(originalAmount.Replace("Rs.", " "), out billAmount))
+            if (double.TryParse(originalAmount.Replace('$', ' '), out billAmount))
             {
                 tipAmount = billAmount * tipPercentage;
                 totalAmount = billAmount + tipAmount;
@@ -40,3 +40,4 @@ namespace TipCalculator
         }
     }
 }
+ 

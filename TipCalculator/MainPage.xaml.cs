@@ -50,24 +50,38 @@ namespace TipCalculator
             // this event is handled for you.
         }
 
+        private void performCalculation()
+        {
+            //LINQ Statment to check for te value entered from radio buttons
+            var selectedRadio = myStackPanel.Children.OfType<RadioButton>().FirstOrDefault(r => r.IsChecked == true);
+
+            //calling CalcualteTip method from Tip 
+            tip.CalculateTip(billAmountTextBox.Text, double.Parse(selectedRadio.Tag.ToString()));
+
+            amountToTipTextBlock.Text = tip.TipAmount;
+            totalTextBlock.Text = tip.TotalAmount;
+        }
+
         private void amountTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-
+            //Setting the value entered for bill amount into the text box after loosing focus
+            billAmountTextBox.Text = tip.BillAmount;
         }
 
         private void billAmountTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            performCalculation();
         }
 
         private void amountTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-
+            //Removing defualt text from text box when it gains focus
+            billAmountTextBox.Text = "";
         }
 
         private void RadioButton_Click(object sender, RoutedEventArgs e)
         {
-
+            performCalculation();
         }
     }
 }
